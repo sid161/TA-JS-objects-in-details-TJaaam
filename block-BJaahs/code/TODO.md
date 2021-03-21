@@ -28,4 +28,32 @@ const testData = {
   options: ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
   correctAnswerIndex: 1,
 };
+
+without object
+let title = 'Where is the capital of Jordan';
+let options = ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi']
+let correctAnswerIndex = 1
+
+function isAnswerCorrect(correctAnswerIndex){
+  if(correctAnswerIndex === true){
+    return ('true');
+  } else{
+    return ('false');
+  }
+};
+
+function getCorrectAnswer(correctAnswerIndex){
+  return 
+}
 ```
+with object 
+
+const testData = {
+  title: 'Where is the capital of Jordan',
+  options: ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
+  correctAnswerIndex: 1,
+  isCorrectAnswer(index) {
+    
+  }
+};
+

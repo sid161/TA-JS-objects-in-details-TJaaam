@@ -34,26 +34,41 @@ let title = 'Where is the capital of Jordan';
 let options = ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi']
 let correctAnswerIndex = 1
 
-function isAnswerCorrect(correctAnswerIndex){
-  if(correctAnswerIndex === true){
-    return ('true');
-  } else{
-    return ('false');
-  }
+function isAnswerCorrect(index){
+ return index === correctAnswerIndex;
 };
 
-function getCorrectAnswer(correctAnswerIndex){
-  return 
+function getCorrectAnswer(){
+  return options[correctAnswerIndex];
 }
 ```
 with object 
 
-const testData = {
+let question = {
   title: 'Where is the capital of Jordan',
   options: ['Tashkent', 'Amaan', 'Kuwait City', 'Nairobi'],
   correctAnswerIndex: 1,
   isCorrectAnswer(index) {
-    
+    return index === question.correctAnswerIndex;
+  }
+  getCorrectAnswer{
+    return question.options[question.correctAnswerIndex];
   }
 };
+
+with functions
+function createQuestion(title,options,correctAnswerIndex){
+  let question = {};
+  question.title = title;
+  question.options = options;
+  question.correctAnswerIndex = correctAnswerIndex;
+
+  question.isAnswerCorrect = function(index){
+    return index === question.correctAnswerIndex;
+
+  };
+  question.getCorrectanswer = {} {
+    return question2.options[question.correctAnswerIndex];
+  }
+}
 

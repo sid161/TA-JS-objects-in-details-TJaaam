@@ -37,11 +37,11 @@ Prototypal method
 let quesmethod = {
   isAnswerCorrect: function(index){
 
-    return isAnswerCorrect;
+    return index === this.correctAnswrIndex;
 
   }
   getCorrectAnswer: function(){
-    return getCorrectAnswer
+    return this.options[this.correctAnswerIndex];
   }
 
 
@@ -56,19 +56,40 @@ function createQuestions(title,options,correctAnswerIndex){
   return user;
 }
 
+pseudoclassical Pattern
+
+function createQuestion(title,options,correctAnswerIndex){
+  let question = Object.create(createQuestion.prototype);
+  question.title = title;
+  question.options = options;
+  question.correctAnswerIndex = correctAnswerIndex;
+
+  return question;
+}
+
+createQuestion.prototype = {
+  isAnswerCorrect: function(index){
+    return index === correctAnswerIndex;
+  }
+  getCorrectAnswer: function(){
+    return options[correctAnswerIndex];
+  }
+}
+
+
 using Classes
 
-Class user{
+Class createQuestion{
   constructor(title,options,correctAnswerIndex){
   this.title = title;
   this.options = options;
   this.correctAnswerIndex = correctAnswerIndex;
   }
   isAnswerCorrect(index){
-    return 
+    return index === correctAnsweIndex; 
   }
   getCorrectAnswer(){
-    return options[];
+    return options[correctAnswerIndex];
   }
 
 }

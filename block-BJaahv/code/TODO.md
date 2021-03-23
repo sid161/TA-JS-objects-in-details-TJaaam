@@ -32,21 +32,26 @@ l function createUser(name,id,noOfProjects){
    user.noOfProjects = noOfProjects;
 
    user.getProjects = function(){
-     return noOfProjects;
+     return user.noOfProjects;
    }
 
    user.changeName = function(newName){
-     return name;
+     let prevName = user.name;
+     user.name = newname;
+     return prevName;
    }
 
    user.incrementProject = function(n){
-     returns noOfProject + n;
+     returns user.noOfProject + n;
    }
 
    user.decrementProject = function(n){
-     return noOfProject - n;
+     return user.noOfProject - n;
    }
 }
+
+let aman = createUSer('rahul' 123, 23);
+let john = createUser('John', 1, 100);
 
 let userMethods = {
    user.getProjects = function(){
@@ -80,19 +85,19 @@ class user{
     this.Id = Id;
     this.noOfProjects = noOfProjects;
   }
-   user.getProjects = function(){
+   user.getProjects() {
      return noOfProjects;
    }
 
-   user.changeName = function(newName){
+   user.changeName(newName){
      return name;
    }
 
-   user.incrementProject = function(n){
+   user.incrementProject (n){
      returns noOfProject + n;
    }
 
-   user.decrementProject = function(n){
+   user.decrementProject(n){
      return noOfProject - n;
    }
 

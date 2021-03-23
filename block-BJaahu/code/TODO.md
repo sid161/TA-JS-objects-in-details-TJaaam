@@ -32,4 +32,44 @@ let secondQuestion = new Question(
   ['Tashkent', 'Amaan', 'Kingston', 'Nairobi'],
   2
 );
+
+Prototypal method
+let quesmethod = {
+  isAnswerCorrect: function(index){
+
+    return isAnswerCorrect;
+
+  }
+  getCorrectAnswer: function(){
+    return getCorrectAnswer
+  }
+
+
+}
+
+function createQuestions(title,options,correctAnswerIndex){
+  let user = object.Create(quesmethod)
+  user.title = title;
+  user.options = options;
+  user.correctAnswerIndex = correctAnswerIndex;
+
+  return user;
+}
+
+using Classes
+
+Class user{
+  constructor(title,options,correctAnswerIndex){
+  this.title = title;
+  this.options = options;
+  this.correctAnswerIndex = correctAnswerIndex;
+  }
+  isAnswerCorrect(index){
+    return 
+  }
+  getCorrectAnswer(){
+    return options[];
+  }
+
+}
 ```

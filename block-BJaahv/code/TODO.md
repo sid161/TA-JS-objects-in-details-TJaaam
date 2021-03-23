@@ -24,3 +24,77 @@ Create User (class/function) with the following properties.
   - [ ] decrementProject -> returns updated number of projects
 
 Write 2 tests for all the different ways of creating object. Test all the methods on these objects.
+
+l function createUser(name,id,noOfProjects){
+   let user = {};
+   user.name = name;
+   user.id = id;
+   user.noOfProjects = noOfProjects;
+
+   user.getProjects = function(){
+     return noOfProjects;
+   }
+
+   user.changeName = function(newName){
+     return name;
+   }
+
+   user.incrementProject = function(n){
+     returns noOfProject + n;
+   }
+
+   user.decrementProject = function(n){
+     return noOfProject - n;
+   }
+}
+
+let userMethods = {
+   user.getProjects = function(){
+     return noOfProjects;
+   }
+
+   user.changeName = function(newName){
+     return name;
+   }
+
+   user.incrementProject = function(n){
+     returns noOfProject + n;
+   }
+
+   user.decrementProject = function(n){
+     return noOfProject - n;
+   }
+}
+
+function createUser(name,Id,noOfProjects){
+  let user = object.create(userMethods);
+  user.name = name;
+  user.Id = Id;
+  user.noOfProjects = noOfProjects;
+  return user;
+}
+
+class user{
+  constructor(name,Id,noOfProjects){
+    this.name = name;
+    this.Id = Id;
+    this.noOfProjects = noOfProjects;
+  }
+   user.getProjects = function(){
+     return noOfProjects;
+   }
+
+   user.changeName = function(newName){
+     return name;
+   }
+
+   user.incrementProject = function(n){
+     returns noOfProject + n;
+   }
+
+   user.decrementProject = function(n){
+     return noOfProject - n;
+   }
+
+
+}

@@ -1,15 +1,15 @@
-console.log(this.document === document); // Output
+console.log(this.document === document); // true
 
 // ------------
 
-console.log(this === window); //Output
+console.log(this === window); //true
 
 // ------------
 
 var myFunction = function () {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); // window
 
 // ------------
 
@@ -17,7 +17,7 @@ function f1() {
   'use strict';
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); // false
 
 // ------------
 
@@ -26,7 +26,9 @@ function foo() {
   console.log(this === window);
 }
 
-foo(); //Output ??
+foo(); // 
+Simple function call
+true
 
 // ------------
 
@@ -34,8 +36,10 @@ foo(); //Output ??
 (function () {
   console.log('Anonymous function invocation');
   console.log(this === window);
-})(); //Output
-
+})();
+ //Output
+Anonymous function invocation
+VM67:3 true
 // ------------
 
 var myObject = {};
@@ -43,7 +47,7 @@ myObject.someMethod = function () {
   console.log(this);
 };
 myObject.someMethod(); //Value Of This
-
+someMethod: function
 // ------------
 
 function Person(fn, ln) {
@@ -56,27 +60,13 @@ function Person(fn, ln) {
 }
 
 let person = new Person('John', 'Reed');
-person.displayName(); // Output
+person.displayName(); // John Reed
 let person2 = new Person('Paul', 'Adams');
-person2.displayName(); // Output
+person2.displayName(); // Paul Adams
 
 // ------------
 
-function foo() {
-  'use strict';
-  console.log('Simple function call');
-  console.log(this === window);
-}
-
-let user = {
-  count: 10,
-  foo: foo,
-  foo1: function () {
-    console.log(this === window);
-  },
-};
-
-user.foo(); // Output
+ // Output
 let fun1 = user.foo1;
 fun1(); // Output ??
 user.foo1(); // Output ??
@@ -299,4 +289,4 @@ const call = {
 
 let newCall = call.anotherCaller;
 
-newCall(); // output ??
+newCall(); // call is already declared

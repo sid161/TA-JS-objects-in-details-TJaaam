@@ -1,10 +1,40 @@
 # More about class
 
 - Create a class named `Square` which accepts one parameter `side` and will set two property `width` and `height` to the value of `side`.
+class Square(){
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+    }
+}
 
 - Add a method name `description` that will alert a message saying `The square is ${width} x ${height}`
+class Square(){
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+
+    }
+    description(){
+        alert(`The square is ${width} x ${height}`);
+    }
+}
 
 - Create a method inside the class named `calcArea` that will return the area of the square.
+class Square(){
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+    }
+    description(){
+        alert(`The square is ${width} x ${height}`);
+    }
+
+    calcArea(){
+
+    }
+}
+
 
 - Create a `area` getter method using which we can get the area of the square.
 
@@ -23,14 +53,58 @@
 ## User Class
 
 - Create a `User` class that accepts `firstName` and `lastName` property
+class User(){
+    constructor(firstName,lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+}
 
 - Create a getter method named `fullName` that will return the full name of the person.
+    class user(){
+        constructor(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        fullName(){
+            return this.name ;
+        }
+    }
 
 - Create a `fullName` setter method that will accept full name parameter of the person. It will update the `firstName` and `lastName` based on the input. Say if the user passed `Arya Stark` it will update the `firstName` to `Arya` and `lastName` to `Stark`. It will also change one condition if the length of the name passed is less than 5 characters it will alert a message saying `Full name should be more than 5 characters`
+class user(){
+        constructor(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        fullName(fi){
+            this.firstName = firstName
+        }
+        fullName(){
+            return this.name ;
+        }
+    }
+
 
 - Create a method named `nameContains` which will accept string and will return `true` or `false` based on if the name of the user contains the text that passed by user.
+class user(){
+        constructor(firstName,lastName){
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+        fullName(fi){
+            this.firstName = firstName
+        }
+        fullName(){
+            return this.name ;
+        }
+        nameContains(string){
+            this.firstname.includes()
+        }
+    }
 
 - Create two instance of the `User` class
+let user1 = user("Sammer","Gupta");
 
 - Check by using the `fullName` setter method with name bigger than 5 characters.
 

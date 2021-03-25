@@ -47,7 +47,7 @@ myObject.someMethod = function () {
   console.log(this);
 };
 myObject.someMethod(); //Value Of This
-someMethod: function
+myObject
 // ------------
 
 function Person(fn, ln) {
@@ -81,10 +81,10 @@ var obj = {
   },
 };
 
-obj.getX(); // Output ??
+obj.getX(); // 81
 
 var retrieveX = obj.getX;
-retrieveX(); //Output ??
+retrieveX(); 9
 
 var boundGetX = retrieveX.bind(obj);
 boundGetX(); // Output ??

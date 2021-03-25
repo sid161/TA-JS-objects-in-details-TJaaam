@@ -19,23 +19,24 @@ Methods
 
 let animalMethods = {
     eat: function(){
-        console.log(`I live in ${location} and I can eat);
+        console.log(`I live in ${this.location} and I can eat);
     }
 
-    changeLocation: function(location){
-        let newLocation = location; 
-        return newLocation;
+    changeLocation: function(newlocation){
+        this.Location = newlocation; 
+        return this.location;
     }
 
     summary: function(){
-        return `I live in ${aninfo.location} and I have ${aninfo.numberOfLegs}`
+        return `I live in ${this.location} and I have ${this.numberOfLegs}`
     }
 }
 
-function animalinfo (location,noOfLegs){
-    let aninfo = object.Create(animalMethods);
-    aninfo.location = location;
-    aninfo.noOfLegs = noOfLegs;
+function createAnimal (location,noOfLegs){
+    let obj = object.Create(animalMethods);
+    obj.location = location;
+    obj.noOfLegs = noOfLegs;
+    return obj
 }
 
 #### Dog
@@ -53,22 +54,34 @@ Methods:
 - `changeName(newName)` - accepts the name property and updates the name of the dog
 - `changeColor(newColor)` - accepts the new color and updates the color of the dog
 - `summary()` - returns `I am ${name} and I am of ${color} color. I can also bark` 
-
 let dogMethods = {
     bark: function(){
-        alert(`I am ${name} and I can bark)
+       alert(`I am ${this.name} and I can bark)
     }
 
-    changeName: function(name){
-        
+    changeName: function(newName){
+       this.name = newName;
+       return this.name;
+    }
 
+    changeColor: function(newColor){
+        this.color = newColor;
+        return this.color;
+    }
+
+    summary: function(){
+        return `I am ${this.name} and I am of ${this.color} color. I can also bark`
     }
 }
 
-function DogAnimal(name,color){
-    let doginfo = object.Create()
-    doginfo.name = name;
-    doginfo.color = color;
+Object.setPrototypeOf(dogsMethod, animalsMethod);
+
+function createDog(location,numberOfLegs,name,color){
+    let obj = object.Create(animalMethods)
+    Object.setPrototypeOf(obj,dogsMethod)
+    dogobj.name = name;
+    dogobj.color = color;
+    return obj
 }
 
 #### Cat

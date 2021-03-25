@@ -10,10 +10,7 @@ Create a function that accepts two inputs (name and age) and returns an object. 
 4. return the object
 
 function makePerson(name,age){
-    obj: function(){
-        this.obj = name;
-        this.age = age;
-        return obj;
+
     }
 }
 

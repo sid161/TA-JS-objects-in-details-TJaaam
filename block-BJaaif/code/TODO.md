@@ -9,6 +9,14 @@ Create a function that accepts two inputs (name and age) and returns an object. 
 3. add an `age` property to the newly created object with its value being the 'age' argument passed into the function
 4. return the object
 
+function makePerson(name,age){
+    obj: function(){
+        this.obj = name;
+        this.age = age;
+        return obj;
+    }
+}
+
 ## Using Object.create
 
 #### Challenge 1/3
@@ -42,16 +50,46 @@ Without editing the code you've already written, add an `introduce` method to th
 #### Challenge 1/2
 
 Create a class `PersonClass`. `PersonClass` should have a constructor that is passed an input of `name` and saves it to a property by the same name. `PersonClass` should also have a method called `greet` that logs the string 'hello'.
+class PersonClass(){
+    constructor(name){
+        this.name = name;
+    }
+    greet(){
+        console.log('hello');
+    }
+}
 
 #### Challenge 2/2
 
 Create a class `DeveloperClass` that creates objects by extending the `PersonClass` class. In addition to having a `name` property and `greet` method, `DeveloperClass` should have an `introduce` method. When called, `introduce` should log the string 'Hello World, my name is [name]'.
+
+class PersonClass{
+    constructor(name){
+        this.name = name;
+    }
+    greet(){
+        console.log('hello');
+    }
+}
+
+class DeveloperClass extends PersonClass{
+    constructor(name){
+        super(name)
+        this.name = name;
+    }
+
+    introduce(){
+        console.log(`Hello World, my name is ${this.name});
+    }
+
+}
 
 ## Subclassing
 
 #### Challenge 1/5
 
 Create an object `adminFunctionStore` that has access to all methods in the `userFunctionStore` object, without copying them over individually.
+
 
 #### Challenge 2/5
 

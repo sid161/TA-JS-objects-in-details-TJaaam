@@ -40,8 +40,8 @@ console.log(userSayHello()); // Say Hello not defined
 console.log(typeof userSayHello.bind(user2)); // reference error sayHelo not defined
 console.log(userSayHello.bind(user2)()); // output / error
 console.log(user3.sayHello()); //sayHello not a function
-console.log(userSayHello.apply(user3)); // userSayhello not defined
-console.log(userSayHello.call(user3)); // output / error
+console.log(userSayHello.apply(user3)); // Hello Bran
+console.log(userSayHello.call(user3)); // Hello Bran
 console.log(typeof new MainUser()); // object
 console.log(typeof new MainUser()); // object
 console.log(new MainUser().sayHello()); // Hello Tryion

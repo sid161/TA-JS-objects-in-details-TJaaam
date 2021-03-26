@@ -28,29 +28,30 @@ Getter
 - `length`: returns the current length of the stack.
 
 class Stack{
-    constructor(stack){
-        this.stack = stack;
+    constructor(){
+        this.stack = [];
     }
     push(a){
-        this.stack = this.stack + a;
+        this.stack = this.stack.push(a);
+        return this.stack;
 
     }
     pop(){
-        var pop = queue.pop();
-        return pop;
-
+        this.stack.pop();
+        return this.stack;
     }
-    peek(b){
-
+    peek(index = this.stack.length - 1){
+        return this.stack[index];
     }
     reverse(){
-
+        this.stack.reverse();
+        return this.stack;
     }
     isEmpty(){
-
+        return !(this.stack.length > 0);
     }
     displayStack(){
-
+        return this.stack.join("");
     }
 }
 #### Test
@@ -91,27 +92,27 @@ Getter
 - `length`: returns the current length of the stack.
 
 class Queue{
-    constructor(queue){
+    constructor(){
         this.queue = queue;
     }
     enqueue(){
-        var enqueue = queue.push('item');
-        return enqueue;
+        this.queue.push('item');
+        return this.queue;
     }
 
     dequeue(){
-        var dequeue = queue.shift();
-        return queue;
+      this.queue.shift();
+        return this.queue;
     }
-    peek(){
-
+    peek(index = this.queue.length - 1){
+        return this.queue;
     }
     isEmpty(){
 
     }
     displayQueue(){
-        let queue = queue.toString();
-        return 
+        this.queue.toString();
+        return this.queue;
     }
 
 }

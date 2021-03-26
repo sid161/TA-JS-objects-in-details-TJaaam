@@ -2,8 +2,8 @@
 1. Create a function named `myMap` and add the method to `Array.prototype`.
 `myMap` will behave similar to how the `Array.map` works. To test the implementation use the code below.
 */
+function myMap(){}
 
-// myMap function goes here
 
 // Test the myMap function you created above
 
@@ -28,7 +28,12 @@ console.log(capitalWords); // it should be 'Quick Brown Fox Jumped Over A Lazy D
 After adding the function test it using the code below.
 */
 
-// You code goes here
+var age = [1,3,4,7,12,14,]
+function odd(age){
+  return age % 2 === 0;
+}
+
+
 
 let even = numbers.myFilter(function (num) {
   return num % 2 === 0;

@@ -27,6 +27,32 @@ Getter
 
 - `length`: returns the current length of the stack.
 
+class Stack{
+    constructor(stack){
+        this.stack = stack;
+    }
+    push(a){
+        this.stack = this.stack + a;
+
+    }
+    pop(){
+        var pop = queue.pop();
+        return pop;
+
+    }
+    peek(b){
+
+    }
+    reverse(){
+
+    }
+    isEmpty(){
+
+    }
+    displayStack(){
+
+    }
+}
 #### Test
 
 ```js
@@ -63,6 +89,32 @@ Methods:
 Getter
 
 - `length`: returns the current length of the stack.
+
+class Queue{
+    constructor(queue){
+        this.queue = queue;
+    }
+    enqueue(){
+        var enqueue = queue.push('item');
+        return enqueue;
+    }
+
+    dequeue(){
+        var dequeue = queue.shift();
+        return queue;
+    }
+    peek(){
+
+    }
+    isEmpty(){
+
+    }
+    displayQueue(){
+        let queue = queue.toString();
+        return 
+    }
+
+}
 
 #### Test
 

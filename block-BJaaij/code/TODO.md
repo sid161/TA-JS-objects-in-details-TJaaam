@@ -31,16 +31,16 @@ Book class will have the following methods:
 After creating the Book and BookList class create 5 book object and add it to list. Test all the methods in Book and BookList class.
 
 class Book{
-    constructor(Title,Category,Author,isRead,finishedDate){
+    constructor(Title,Category,Author){
         this.title = title;
         this.Category = Category;
         this.Author = Author;
-        this.isRead = isRead;
-        this.finishedDate = finishedDate;
+        this.isRead = false;
+        this.finishedDate = null;
     }
 
     markBookAsRead(){
-        markBookAsRead.isRead = true;
+        this.isRead = true;
         markBookAsRead.finishedDate = `Date.now();
     }
 
@@ -48,23 +48,35 @@ class Book{
 
 class BookList{
     constructor()
-        let books = []
+        this.books = []
+        this.currentIndexBook = 0;
     }
 
-    add([Book])(){
-
+    add(books = []){
+        this.book = this.book.push(books);
+        return this.books;
     }
 
     getCurrentBook(index){
+        return this.book[this.currentIndexBook ];
 
     }
     getNextBook(){
+        return this.book[this.currentIndexBoook + 1];
 
     }
     getPrevBook(){
-
+        return this.book[this.currentIndexBook - 1];
     }
-    changeCurrentBook(){
+    changeCurrentBook(index){
+        return this.book[index];
 
     }
 }
+
+let book1 = new Book("Ah,Wilderness!","Fictional","Aldous Huxley");
+let book2 = new Book("Alen Corn", "Drama","Sidney Howard");
+let book3 = new Book("Antic Hay","Comedy","Aldous Huxley");
+
+let library = new BookList();
+library.add([book1, book2, book3]);
